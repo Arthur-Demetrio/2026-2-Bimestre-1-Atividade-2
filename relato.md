@@ -38,11 +38,50 @@ Além disso o C++ está disponível na maioria das principais plataformas, siste
 
 ### Criando linhas de execução
 
-FIXME
+No C++, podemos criar linhas de execução utilizando a biblioteca <thread>. Elas permitem que diferentes tarefas sejam executadas de forma independente, podendo ocorrer ao mesmo tempo. Para criar uma linha de execução, utilizamos std::thread, passando a função que será executada.
+
+EXEMPLO:
+
+#include <iostream>
+#include <thread>
+
+void tarefa() {
+    std::cout << "Executando uma tarefa.\n";
+}
+
+int main() {
+    std::thread t(tarefa);
+
+    t.join();
+
+    return 0;
+}
+
+Nesse exemplo, t representa uma nova linha de execução que executará a função tarefa(). O comando join() faz com que o programa principal aguarde a finalização dessa linha de execução antes de continuar.
 
 ### Passando valores para linhas de execução
 
-FIXME
+Também é possível passar valores para uma linha de execução no momento em que ela é criada. Esses valores são enviados como argumentos para a função que será executada pela thread.
+
+EXEMPLO:
+
+#include <iostream>
+#include <thread>
+
+void mostrarNumero(int numero) {
+    std::cout << "Número: " << numero << "\n";
+}
+
+int main() {
+    std::thread t(mostrarNumero, 10);
+
+    t.join();
+
+    return 0;
+}
+
+Nesse caso, o valor 10 é passado para a função mostrarNumero(). A linha de execução recebe esse valor como parâmetro e realiza a tarefa definida na função.
+Dessa forma, o uso de argumentos permite que diferentes linhas de execução trabalhem com diferentes informações, tornando o programa mais flexível.
 
 ### Múltiplas linhas de execução
 
