@@ -14,21 +14,25 @@ O grupo de trabalho foi formado por Artur Lima, Arthur Vinicius e Caio Lucas.
 
 C++ é uma linguagem que tem como paradigmas ser:
 
->Procedural
- Herdando a estrutura base da linguagem C, permitindo organizar o código em funções e sequências lineares de comandos
->Orientada a Objetos
-Adiciona conceitos como classes, herança, polimorfismo e encapsulamento para facilitar a reutilização e a organização de grandes
->Genérica
-Utiliza recursos chamados templates para criar funções e estruturas de dados que funcionam com qualquer tipo de dado sem reescrever o código.
+Procedural
+>Herdando a estrutura base da linguagem C, permitindo organizar o código em funções e sequências lineares de comandos
+
+Orientada a Objetos
+>Adiciona conceitos como classes, herança, polimorfismo e encapsulamento para facilitar a reutilização e a organização de grandes
+
+Genérica
+>Utiliza recursos chamados templates para criar funções e estruturas de dados que funcionam com qualquer tipo de dado sem reescrever o código.
 
 Objetivos:
 
->Desempenho máximo
-Executar tarefas pesadas com velocidade próxima à de códigos escritos em linguagem de máquina.
->Controle de recursos
-Permitir a gestão explícita e direta da memória RAM.
->Evolução do C
-Servir como uma extensão da linguagem C, mantendo a compatibilidade e adicionando ferramentas para gerenciar complexidade.
+Desempenho máximo
+>Executar tarefas pesadas com velocidade próxima à de códigos escritos em linguagem de máquina.
+
+Controle de recursos
+>Permitir a gestão explícita e direta da memória RAM.
+
+Evolução do C
+>Servir como uma extensão da linguagem C, mantendo a compatibilidade e adicionando ferramentas para gerenciar complexidade.
 
 Além disso o C++ está disponível na maioria das principais plataformas, sistemas operacionais e ambientes de desenvolvimento do mundo.
 
