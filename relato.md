@@ -4,7 +4,7 @@
 
 Este relato faz parte do processo avaliativo da disciplina de sistemas operacionas no curso superior em análise e desenvolvimento de sistemas, ofertado na Diretoria acadêmica de gestão e tecnologia da informação no campus natal-central do instituto federal de educação, ciência e tecnologia do rio grande do norte.
 
-Tem como objetivo principal relatar como implementar linhas de execução na linguagem FIXME.
+Tem como objetivo principal relatar como implementar linhas de execução na linguagem C++.
 
 O grupo de trabalho foi formado por Artur Lima, Arthur Vinicius e Caio Lucas.
 
@@ -85,8 +85,29 @@ Dessa forma, o uso de argumentos permite que diferentes linhas de execução tra
 
 ### Múltiplas linhas de execução
 
-FIXME
+É possível criar várias threads para executar tarefas de forma concorrente. No exemplo, são criadas cinco threads, cada uma representando um trabalhador:
+
+vector<thread> threads;
+
+for (int i = 0; i < 5; ++i) {
+    threads.emplace_back(trabalhador, i, 2);
+}
+
+Após a criação, o programa aguarda o término das threads utilizando join():
+
+for (auto& t : threads) {
+    if (t.joinable()) {
+        t.join();
+    }
+}
+
+Como as tarefas são executadas simultaneamente, o tempo total fica próximo de dois segundos, enquanto uma execução sequencial levaria aproximadamente dez segundos.
 
 ## Considerações finais
 
-FIXME
+A atividade permitiu compreender a criação e utilização de threads em C++, além da sincronização por meio de join():
+
+thread t(minha_funcao);
+t.join();
+
+Também foi possível observar que múltiplas threads podem executar tarefas de forma concorrente, reduzindo o tempo de execução de tarefas independentes.
